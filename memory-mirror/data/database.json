@@ -1,0 +1,391 @@
+{
+  "updated_at": "2026-10-23T18:51:59.097Z",
+  "workspaces": [
+    {
+      "id": "lab-robotics-01",
+      "name": "Main Robotics & Mechatronics Lab",
+      "slug": "robotics-lab",
+      "code": "ROBOTICS-LAB",
+      "admin_id": "admin-01",
+      "created_at": "2024-01-10T08:00:00Z"
+    },
+    {
+      "id": "lab-nanofab-02",
+      "name": "Advanced Micro & Nanofabrication Facility",
+      "slug": "nanofab-lab",
+      "code": "NANOFAB-LAB",
+      "admin_id": "admin-02",
+      "created_at": "2024-02-15T09:00:00Z"
+    },
+    {
+      "id": "lab-mvlaw0w8",
+      "name": "compsb",
+      "code": "IOT",
+      "admin_id": "admin-mvlaw0w8",
+      "created_at": "2026-10-23T18:25:42.536Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "admin-01",
+      "workspace_id": "lab-robotics-01",
+      "name": "Dr. Alex Reynolds",
+      "email": "admin@robotics.mirror",
+      "username": "admin_robotics",
+      "password": "password123",
+      "role": "admin",
+      "created_at": "2024-01-10T08:00:00Z"
+    },
+    {
+      "id": "staff-01",
+      "workspace_id": "lab-robotics-01",
+      "name": "Marcus Chen",
+      "email": "marcus@robotics.mirror",
+      "username": "staff_marcus",
+      "password": "password123",
+      "role": "staff",
+      "created_by": "admin-01",
+      "created_at": "2024-03-01T10:00:00Z"
+    },
+    {
+      "id": "staff-02",
+      "workspace_id": "lab-robotics-01",
+      "name": "Elena Rostova",
+      "email": "elena@robotics.mirror",
+      "username": "staff_elena",
+      "password": "password123",
+      "role": "staff",
+      "created_by": "admin-01",
+      "created_at": "2024-04-12T11:30:00Z"
+    },
+    {
+      "id": "admin-02",
+      "workspace_id": "lab-nanofab-02",
+      "name": "Dr. Sarah Lin",
+      "email": "admin@nanofab.mirror",
+      "username": "admin_nanofab",
+      "password": "password123",
+      "role": "admin",
+      "created_at": "2024-02-15T09:00:00Z"
+    },
+    {
+      "id": "staff-03",
+      "workspace_id": "lab-nanofab-02",
+      "name": "Kenji Tanaka",
+      "email": "tanaka@nanofab.mirror",
+      "username": "staff_tanaka",
+      "password": "password123",
+      "role": "staff",
+      "created_by": "admin-02",
+      "created_at": "2024-05-20T14:00:00Z"
+    },
+    {
+      "id": "staff-mvlaqr5z",
+      "workspace_id": "lab-robotics-01",
+      "name": "Krishna Singh",
+      "email": "krishna@lab.mirror",
+      "username": "krishna_singh",
+      "password": "password123",
+      "role": "staff",
+      "created_by": "admin-01",
+      "created_at": "2026-10-23T18:21:36.647Z"
+    },
+    {
+      "id": "admin-mvlaw0w8",
+      "workspace_id": "lab-mvlaw0w8",
+      "name": "krishna singh",
+      "email": "ks868874@gmail.com",
+      "username": "ks868874",
+      "password": "123456",
+      "role": "admin",
+      "created_at": "2026-10-23T18:25:42.536Z"
+    },
+    {
+      "id": "staff-mvlaxuo2",
+      "workspace_id": "lab-mvlaw0w8",
+      "name": "ravikumar",
+      "email": "ks868874@gmail.com",
+      "username": "ravikumar",
+      "password": "123456",
+      "role": "staff",
+      "created_by": "admin-mvlaw0w8",
+      "created_at": "2026-10-23T18:27:07.778Z"
+    }
+  ],
+  "assets": [
+    {
+      "id": "asset-rob-01",
+      "workspace_id": "lab-robotics-01",
+      "uid": "04A32F1B",
+      "item_name": "Tektronix 4-Channel Digital Storage Oscilloscope",
+      "category": "Test & Measurement",
+      "department": "Electronics Testing Bay 2",
+      "purchase_date": "2024-03-15",
+      "cost": 2850,
+      "status": "active",
+      "image_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/04A32F1B.jpg",
+      "created_at": "2024-03-15T09:00:00Z",
+      "updated_at": "2026-10-15T14:22:00Z"
+    },
+    {
+      "id": "asset-rob-02",
+      "workspace_id": "lab-robotics-01",
+      "uid": "82B41C90",
+      "item_name": "Bantam Tools Desktop Precision CNC Router",
+      "category": "Machining & CNC",
+      "department": "Rapid Machining Cell",
+      "purchase_date": "2023-11-20",
+      "cost": 6400,
+      "status": "under_maintenance",
+      "image_url": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/82B41C90.jpg",
+      "created_at": "2023-11-20T11:30:00Z",
+      "updated_at": "2026-10-19T08:15:00Z"
+    },
+    {
+      "id": "asset-rob-03",
+      "workspace_id": "lab-robotics-01",
+      "uid": "F0E1D2C3",
+      "item_name": "Main Lab Storage Cupboard #4 (Lockable Tools & Safety Gear)",
+      "category": "Storage & Tooling",
+      "department": "Central Storage Zone",
+      "purchase_date": "2023-08-10",
+      "cost": 1200,
+      "status": "active",
+      "image_url": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/F0E1D2C3.jpg",
+      "created_at": "2023-08-10T10:15:00Z",
+      "updated_at": "2026-09-28T16:45:00Z"
+    },
+    {
+      "id": "asset-rob-04",
+      "workspace_id": "lab-robotics-01",
+      "uid": "1A2B3C4D",
+      "item_name": "Formlabs Form 4 Stereolithography 3D Printer",
+      "category": "Additive Manufacturing",
+      "department": "Polymer Prototyping Bay",
+      "purchase_date": "2024-05-12",
+      "cost": 4500,
+      "status": "active",
+      "image_url": "https://images.unsplash.com/photo-1581092217951-a96860dbd637?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/1A2B3C4D.jpg",
+      "created_at": "2024-05-12T13:00:00Z",
+      "updated_at": "2026-10-10T11:00:00Z"
+    },
+    {
+      "id": "asset-rob-05",
+      "workspace_id": "lab-robotics-01",
+      "uid": "99AA88BB",
+      "item_name": "KUKA KR 6 Six-Axis Articulated Robotic Arm",
+      "category": "Robotics & Actuators",
+      "department": "Robotics Workcell A",
+      "purchase_date": "2023-04-05",
+      "cost": 18500,
+      "status": "faulty",
+      "image_url": "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/99AA88BB.jpg",
+      "created_at": "2023-04-05T15:45:00Z",
+      "updated_at": "2026-10-18T10:20:00Z"
+    },
+    {
+      "id": "asset-rob-06",
+      "workspace_id": "lab-robotics-01",
+      "uid": "55EE44FF",
+      "item_name": "Weller WXsmart Digital Rework & Soldering Station",
+      "category": "Assembly & Rework",
+      "department": "SMT Assembly Bench 1",
+      "purchase_date": "2024-01-18",
+      "cost": 1100,
+      "status": "active",
+      "image_url": "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/55EE44FF.jpg",
+      "created_at": "2024-01-18T08:00:00Z",
+      "updated_at": "2026-09-12T09:30:00Z"
+    },
+    {
+      "id": "asset-nano-01",
+      "workspace_id": "lab-nanofab-02",
+      "uid": "AA11BB22",
+      "item_name": "Rigol RSA5065-TG 6.5GHz Real-Time Spectrum Analyzer",
+      "category": "Test & Measurement",
+      "department": "Cleanroom RF Suite",
+      "purchase_date": "2024-06-01",
+      "cost": 7800,
+      "status": "active",
+      "image_url": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/AA11BB22.jpg",
+      "created_at": "2024-06-01T10:00:00Z",
+      "updated_at": "2026-10-01T11:00:00Z"
+    },
+    {
+      "id": "asset-nano-02",
+      "workspace_id": "lab-nanofab-02",
+      "uid": "CC33DD44",
+      "item_name": "Main Lab Chemical Flammables Storage Cupboard #1",
+      "category": "Storage & Tooling",
+      "department": "Wet Chemical Bay",
+      "purchase_date": "2023-09-15",
+      "cost": 1800,
+      "status": "active",
+      "image_url": "https://images.unsplash.com/photo-1584467735871-8e85353a8413?auto=format&fit=crop&w=800&q=80",
+      "image_path": "local/CC33DD44.jpg",
+      "created_at": "2023-09-15T09:30:00Z",
+      "updated_at": "2026-09-20T14:00:00Z"
+    },
+    {
+      "id": "50279874-99e7-488c-ad54-0b64e8912629",
+      "workspace_id": "lab-mvlaw0w8",
+      "uid": "51DFF206",
+      "item_name": "mobile phoe",
+      "category": "Test & Measurement",
+      "department": "IOT",
+      "purchase_date": "2026-10-23",
+      "cost": null,
+      "status": "active",
+      "image_url": "/uploads/51DFF206-1792781303527.jpeg",
+      "image_path": "51DFF206-1792781303527.jpeg",
+      "created_at": "2026-10-23T18:48:23.531Z",
+      "updated_at": "2026-10-23T18:48:55.870Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "5e3a8024-9123-457c-a3b0-a3f4f5bb6ba4",
+      "workspace_id": "lab-mvlaw0w8",
+      "asset_uid": "51DFF206",
+      "staff_id": "staff-mvlaxuo2",
+      "assistant_name": "Dr. Evelyn Vance",
+      "description": "changed the guard",
+      "log_date": "2026-10-23",
+      "log_type": "inspection",
+      "parts_replaced": [],
+      "created_at": "2026-10-23T18:48:55.870Z"
+    },
+    {
+      "id": "log-001",
+      "workspace_id": "lab-robotics-01",
+      "asset_uid": "04A32F1B",
+      "assistant_name": "Marcus Chen",
+      "staff_id": "staff-01",
+      "log_date": "2026-10-15",
+      "log_type": "calibration",
+      "description": "Quarterly NIST traceability check on Channel 1 and 2 probes. Offset verified within 0.08% limit.",
+      "parts_replaced": [
+        "NIST Traceability Sticker",
+        "Probe Ground Lead"
+      ],
+      "created_at": "2026-10-15T14:22:00Z"
+    },
+    {
+      "id": "log-002",
+      "workspace_id": "lab-robotics-01",
+      "asset_uid": "82B41C90",
+      "assistant_name": "Elena Rostova",
+      "staff_id": "staff-02",
+      "log_date": "2026-10-19",
+      "log_type": "repair",
+      "description": "Spindle motor drive belt slipped under 24k RPM aluminum feed. Dismantled spindle cover, inspected bearings, awaiting OEM belt.",
+      "parts_replaced": [
+        "Spindle Drive Belt (Ordered)"
+      ],
+      "created_at": "2026-10-19T08:15:00Z"
+    },
+    {
+      "id": "log-003",
+      "workspace_id": "lab-robotics-01",
+      "asset_uid": "F0E1D2C3",
+      "assistant_name": "Dr. Alex Reynolds",
+      "staff_id": "admin-01",
+      "log_date": "2026-09-28",
+      "log_type": "inspection",
+      "description": "Quarterly audit of lockable storage cupboard contents. Verified all high-voltage insulated gloves and face shields intact.",
+      "parts_replaced": [],
+      "created_at": "2026-09-28T16:45:00Z"
+    },
+    {
+      "id": "log-004",
+      "workspace_id": "lab-robotics-01",
+      "asset_uid": "1A2B3C4D",
+      "assistant_name": "Marcus Chen",
+      "staff_id": "staff-01",
+      "log_date": "2026-10-10",
+      "log_type": "cleaning",
+      "description": "Optical optical resin window wiped with isopropyl alcohol. Galvo mirrors checked for micro-dust contamination.",
+      "parts_replaced": [
+        "Resin Tank Wiper"
+      ],
+      "created_at": "2026-10-10T11:00:00Z"
+    },
+    {
+      "id": "log-005",
+      "workspace_id": "lab-robotics-01",
+      "asset_uid": "99AA88BB",
+      "assistant_name": "Elena Rostova",
+      "staff_id": "staff-02",
+      "log_date": "2026-10-18",
+      "log_type": "repair",
+      "description": "Joint 3 positional encoder error flag during automated pick-and-place sequence. Flagged as faulty for OEM service inspection.",
+      "parts_replaced": [],
+      "created_at": "2026-10-18T10:20:00Z"
+    }
+  ],
+  "scans": [
+    {
+      "id": 8,
+      "uid": "081F694D",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-23T18:51:59.096Z"
+    },
+    {
+      "id": 7,
+      "uid": "5B871506",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-23T18:51:51.020Z"
+    },
+    {
+      "id": 6,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-23T18:51:45.943Z"
+    },
+    {
+      "id": 5,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-23T18:49:09.417Z"
+    },
+    {
+      "id": 4,
+      "uid": "51DFF206",
+      "device_id": "robotics-esp32-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-23T18:48:55.932Z"
+    },
+    {
+      "id": 3,
+      "uid": "51DFF206",
+      "device_id": "robotics-esp32-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-23T18:48:23.600Z"
+    },
+    {
+      "id": 2,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-23T18:47:39.821Z"
+    },
+    {
+      "id": 1,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-23T18:47:11.131Z"
+    }
+  ]
+}

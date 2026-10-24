@@ -1,0 +1,22 @@
+{
+  "name": "project-memory-mirror",
+  "version": "1.0.0",
+  "description": "Project Memory Mirror — Universal Physical Object Digital History & Asset Maintenance Tracker",
+  "scripts": {
+    "start": "cd memory-mirror && npm start",
+    "dev": "cd memory-mirror && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "setup": "cd memory-mirror && npm install && cd ../frontend && npm install"
+  },
+  "keywords": [
+    "esp32",
+    "rfid",
+    "asset-tracking",
+    "maintenance-tracker",
+    "supabase",
+    "qr-code"
+  ],
+  "author": "Principal Full-Stack Engineer & System Architect",
+  "license": "ISC"
+}
