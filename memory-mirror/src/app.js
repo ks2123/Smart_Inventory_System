@@ -102,15 +102,26 @@ app.get('/api/db', (req, res) => {
   res.json(store.getRawDatabaseSnapshot());
 });
 
-// Serve frontend static build in production
+// Serve frontend static build in production with aggressive no-cache so updates apply immediately
 const FRONTEND_DIST = path.join(__dirname, '../../frontend/dist');
-app.use(express.static(FRONTEND_DIST));
+app.use(express.static(FRONTEND_DIST, {
+  etag: false,
+  lastModified: false,
+  setHeaders: (res) => {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+  },
+}));
 
 app.get('*', (req, res, next) => {
   if (req.path.startsWith('/api')) return next();
   const indexHtml = path.join(FRONTEND_DIST, 'index.html');
   const fs = require('fs');
   if (fs.existsSync(indexHtml)) {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
     return res.sendFile(indexHtml);
   }
   res.status(404).json({ error: 'Endpoint or static build not found' });
