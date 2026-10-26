@@ -21,6 +21,8 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
   useEffect(() => {
     if (isOpen) {
       setError('');
+      setIdentifier('');
+      setPassword('');
       if (initialRole === 'admin') setActiveTab('admin');
       else setActiveTab('staff');
     }
@@ -152,7 +154,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
           isDark ? 'bg-slate-900 border-slate-800' : 'bg-[#F4F8FC] border-[#96C2EC]'
         }`}>
           <button
-            onClick={() => { setActiveTab('staff'); setError(''); }}
+            onClick={() => { setActiveTab('staff'); setIdentifier(''); setPassword(''); setError(''); }}
             className={`py-2 px-3 rounded-xl font-bold uppercase transition-all flex items-center justify-center gap-1.5 ${
               activeTab === 'staff'
                 ? isDark
@@ -168,7 +170,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
           </button>
 
           <button
-            onClick={() => { setActiveTab('admin'); setError(''); }}
+            onClick={() => { setActiveTab('admin'); setIdentifier(''); setPassword(''); setError(''); }}
             className={`py-2 px-3 rounded-xl font-bold uppercase transition-all flex items-center justify-center gap-1.5 ${
               activeTab === 'admin'
                 ? isDark
@@ -193,7 +195,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
 
         {/* --- TAB 1: STAFF LOGIN --- */}
         {activeTab === 'staff' && (
-          <form onSubmit={handleLoginSubmit} className="mt-5 space-y-4">
+          <form onSubmit={handleLoginSubmit} autoComplete="off" className="mt-5 space-y-4">
             <div className={`p-3 rounded-2xl border text-xs font-mono ${
               isDark
                 ? 'bg-cyan-950/40 border-cyan-500/20 text-cyan-200'
@@ -217,6 +219,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                   value={identifier}
                   onChange={(e) => setIdentifier(e.target.value)}
                   placeholder="e.g. staff_marcus"
+                  autoComplete="off"
                   required
                   className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                     isDark
@@ -242,6 +245,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
+                  autoComplete="off"
                   required
                   className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                     isDark
@@ -271,7 +275,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
           <div className="mt-5">
             {!isAdminRegister ? (
               /* Admin Sign In */
-              <form onSubmit={handleLoginSubmit} className="space-y-4">
+              <form onSubmit={handleLoginSubmit} autoComplete="off" className="space-y-4">
                 <div className="flex items-center justify-between text-xs font-mono pb-2">
                   <span className={isDark ? "text-slate-400" : "text-slate-600"}>Lab Owner / Workspace Administrator</span>
                   <button
@@ -300,6 +304,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                       value={identifier}
                       onChange={(e) => setIdentifier(e.target.value)}
                       placeholder="admin@robotics.mirror"
+                      autoComplete="off"
                       required
                       className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                         isDark
@@ -325,6 +330,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••"
+                      autoComplete="off"
                       required
                       className={`w-full pl-10 pr-4 py-2.5 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                         isDark
@@ -349,7 +355,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
               </form>
             ) : (
               /* Register New Lab Workspace */
-              <form onSubmit={handleRegisterAdminSubmit} className="space-y-3.5">
+              <form onSubmit={handleRegisterAdminSubmit} autoComplete="off" className="space-y-3.5">
                 <div className="flex items-center justify-between text-xs font-mono pb-1">
                   <span className={`font-bold ${isDark ? 'text-cyan-400' : 'text-sky-600'}`}>Create New Lab Workspace &amp; Owner</span>
                   <button
@@ -372,6 +378,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                     value={labName}
                     onChange={(e) => setLabName(e.target.value)}
                     placeholder="e.g. Main Robotics & Mechatronics Lab"
+                    autoComplete="off"
                     required
                     className={`w-full px-4 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                       isDark
@@ -393,6 +400,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                       value={adminName}
                       onChange={(e) => setAdminName(e.target.value)}
                       placeholder="Dr. Alex Reynolds"
+                      autoComplete="off"
                       required
                       className={`w-full px-4 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                         isDark
@@ -412,6 +420,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                       value={labCode}
                       onChange={(e) => setLabCode(e.target.value)}
                       placeholder="ROBOTICS-LAB"
+                      autoComplete="off"
                       required
                       className={`w-full px-4 py-2 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                         isDark
@@ -434,6 +443,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                       value={adminEmail}
                       onChange={(e) => setAdminEmail(e.target.value)}
                       placeholder="admin@lab.mirror"
+                      autoComplete="off"
                       required
                       className={`w-full px-4 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                         isDark
@@ -453,6 +463,7 @@ export default function AuthModal({ isOpen, onClose, onAuthSuccess, initialRole 
                       value={adminPassword}
                       onChange={(e) => setAdminPassword(e.target.value)}
                       placeholder="••••••••"
+                      autoComplete="off"
                       required
                       className={`w-full px-4 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                         isDark

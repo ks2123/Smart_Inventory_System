@@ -31,6 +31,8 @@ export default function StaffManagementModal({ isOpen, onClose, workspace, isDar
   useEffect(() => {
     if (isOpen) {
       setError('');
+      setName('');
+      setEmail('');
       setSuccessCreds(null);
       loadStaff();
       generateSuggestedCreds();
@@ -197,7 +199,7 @@ export default function StaffManagementModal({ isOpen, onClose, workspace, isDar
               PROVISION NEW STAFF ACCOUNT
             </h3>
 
-            <form onSubmit={handleCreateSubmit} className="space-y-3">
+            <form onSubmit={handleCreateSubmit} autoComplete="off" className="space-y-3">
               <div>
                 <label className={`block text-[10px] font-mono font-bold uppercase mb-1 ${
                   isDark ? 'text-slate-400' : 'text-slate-600'
@@ -209,6 +211,7 @@ export default function StaffManagementModal({ isOpen, onClose, workspace, isDar
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="e.g. Liam Vance"
+                  autoComplete="off"
                   required
                   className={`w-full px-3 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                     isDark
@@ -240,6 +243,7 @@ export default function StaffManagementModal({ isOpen, onClose, workspace, isDar
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
+                  autoComplete="off"
                   required
                   className={`w-full px-3 py-2 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                     isDark
@@ -259,6 +263,7 @@ export default function StaffManagementModal({ isOpen, onClose, workspace, isDar
                   type="text"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="off"
                   required
                   className={`w-full px-3 py-2 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                     isDark
@@ -279,6 +284,7 @@ export default function StaffManagementModal({ isOpen, onClose, workspace, isDar
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="liam@lab.mirror"
+                  autoComplete="off"
                   className={`w-full px-3 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                     isDark
                       ? 'bg-slate-950 border-slate-700 text-white focus:border-cyan-400'

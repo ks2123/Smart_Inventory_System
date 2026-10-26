@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { X, Upload, Camera, Tag, Cpu, DollarSign, Calendar, MapPin, Sparkles, AlertCircle } from 'lucide-react';
 import { createAsset } from '../api/client';
 
@@ -16,6 +16,22 @@ export default function RegisterAssetModal({ isOpen, onClose, onCreated, initial
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const fileInputRef = useRef(null);
+
+  // Auto-fill detected RFID UID and reset stale previous fields whenever modal opens
+  useEffect(() => {
+    if (isOpen) {
+      if (initialUid) {
+        setUid(initialUid);
+      } else {
+        setUid('');
+      }
+      setItemName('');
+      setCost('');
+      setImageFile(null);
+      setPreviewUrl('');
+      setError('');
+    }
+  }, [isOpen, initialUid]);
 
   if (!isOpen) return null;
 
@@ -135,7 +151,7 @@ export default function RegisterAssetModal({ isOpen, onClose, onCreated, initial
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="mt-5 space-y-4">
+        <form onSubmit={handleSubmit} autoComplete="off" className="mt-5 space-y-4">
           
           {/* RFID UID row with auto-generate button */}
           <div>
@@ -150,6 +166,7 @@ export default function RegisterAssetModal({ isOpen, onClose, onCreated, initial
                   value={uid}
                   onChange={(e) => setUid(e.target.value)}
                   placeholder="e.g. 04:A3:2F:1B"
+                  autoComplete="off"
                   required
                   className={`w-full pl-10 pr-4 py-2 rounded-xl font-mono text-xs border focus:outline-none transition-all ${
                     isDark
@@ -183,6 +200,7 @@ export default function RegisterAssetModal({ isOpen, onClose, onCreated, initial
               value={itemName}
               onChange={(e) => setItemName(e.target.value)}
               placeholder="e.g. Tektronix 4-Channel Digital Storage Oscilloscope"
+              autoComplete="off"
               required
               className={`w-full px-4 py-2 rounded-xl text-xs border focus:outline-none transition-all ${
                 isDark
@@ -225,6 +243,7 @@ export default function RegisterAssetModal({ isOpen, onClose, onCreated, initial
                 value={department}
                 onChange={(e) => setDepartment(e.target.value)}
                 placeholder="Electronics Lab Alpha"
+                autoComplete="off"
                 required
                 className={`w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none transition-all ${
                   isDark
@@ -265,6 +284,7 @@ export default function RegisterAssetModal({ isOpen, onClose, onCreated, initial
                   value={cost}
                   onChange={(e) => setCost(e.target.value)}
                   placeholder="0"
+                  autoComplete="off"
                   className={`w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none transition-all ${
                     isDark
                       ? 'bg-slate-900 border-slate-700 text-white'

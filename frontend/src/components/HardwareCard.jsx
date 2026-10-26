@@ -2,7 +2,7 @@ import React from 'react';
 import { Cpu, Radio, ShieldCheck, QrCode, Wrench, Calendar, MapPin, Tag, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function HardwareCard({ scannedData, onLogMaintenance, onOpenQr, onOpenDetails, isDark }) {
+export default function HardwareCard({ scannedData, onLogMaintenance, onOpenQr, onOpenDetails, onRegister, isDark }) {
   if (!scannedData) return null;
 
   const isRegistered = scannedData.registered !== false && scannedData.asset;
@@ -114,6 +114,18 @@ export default function HardwareCard({ scannedData, onLogMaintenance, onOpenQr, 
             <p className="mt-2 text-xs font-mono opacity-70">
               UID <strong className="text-cyan-400">{scannedData.uid}</strong> is not bound to any equipment in this lab workspace.
             </p>
+
+            {onRegister && (
+              <div className="mt-5">
+                <button
+                  onClick={() => onRegister(scannedData.uid)}
+                  className="px-6 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-heading font-black text-xs uppercase tracking-wider shadow-glow-cyan-sm hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mx-auto"
+                >
+                  <Tag className="w-4 h-4" />
+                  <span>+ REGISTER DETECTED RFID ({scannedData.uid})</span>
+                </button>
+              </div>
+            )}
             
             {/* OLED Buffer */}
             <div className="mt-6 oled-screen rounded-2xl p-5 text-left border border-slate-800 shadow-xl">

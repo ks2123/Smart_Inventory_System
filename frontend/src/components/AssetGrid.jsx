@@ -99,6 +99,7 @@ export default function AssetGrid({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search asset name, RFID UID, category, or lab location..."
+              autoComplete="off"
               className={`w-full pl-10 pr-4 py-2 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                 isDark
                   ? 'bg-slate-950/70 border-slate-800 text-white placeholder-slate-500 focus:border-cyan-400'

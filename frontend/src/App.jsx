@@ -71,6 +71,7 @@ export default function App() {
   const [staffManagementOpen, setStaffManagementOpen] = useState(false);
   const [registerOpen, setRegisterOpen] = useState(false);
   const [initialUidForRegister, setInitialUidForRegister] = useState('');
+  const [lastDetectedUid, setLastDetectedUid] = useState('');
   const [auditAsset, setAuditAsset] = useState(null);
   const [qrAsset, setQrAsset] = useState(null);
   const [detailsUid, setDetailsUid] = useState(null);
@@ -147,12 +148,22 @@ export default function App() {
     loadData();
   }, [user, workspace, searchQuery]);
 
+  // Open Register modal and autofill the detected RFID
+  const openRegisterModal = (uidOverride) => {
+    requireAuth(() => {
+      const targetUid = uidOverride || lastDetectedUid || (scannedData?.uid || '');
+      setInitialUidForRegister(targetUid);
+      setRegisterOpen(true);
+    });
+  };
+
   // Subscribe to real-time events via Server-Sent Events (SSE)
   useEffect(() => {
     const unsubscribe = subscribeToEvents((event) => {
       if (event.type === 'scan') {
         setScannedData(event.data);
-        if (event.data?.registered === false) {
+        if (event.data?.uid) {
+          setLastDetectedUid(event.data.uid);
           setInitialUidForRegister(event.data.uid);
         }
         setIsScanModalOpen(true);
@@ -171,7 +182,8 @@ export default function App() {
       setScanning(true);
       const res = await triggerScan(uid, deviceId);
       setScannedData(res.data);
-      if (res.data?.registered === false) {
+      if (res.data?.uid) {
+        setLastDetectedUid(res.data.uid);
         setInitialUidForRegister(res.data.uid);
       }
       setIsScanModalOpen(true);
@@ -261,7 +273,7 @@ export default function App() {
             workspace={workspace}
             onOpenAuth={(role) => { setAuthInitialRole(role || 'staff'); setAuthOpen(true); }}
             onLogout={handleLogout}
-            onOpenRegister={() => requireAuth(() => { setInitialUidForRegister(''); setRegisterOpen(true); })}
+            onOpenRegister={() => openRegisterModal()}
             onOpenStaffManagement={() => setStaffManagementOpen(true)}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
@@ -334,7 +346,7 @@ export default function App() {
                       </button>
 
                       <button
-                        onClick={() => requireAuth(() => { setInitialUidForRegister(''); setRegisterOpen(true); })}
+                        onClick={() => openRegisterModal()}
                         className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-heading font-black text-xs uppercase tracking-wider transition-all ${
                           isDark
                             ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 shadow-glow-cyan-sm'
@@ -450,7 +462,7 @@ export default function App() {
                       </button>
 
                       <button
-                        onClick={() => requireAuth(() => { setInitialUidForRegister(''); setRegisterOpen(true); })}
+                        onClick={() => openRegisterModal()}
                         className={`flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-heading font-bold uppercase tracking-wider border transition-all ${
                           isDark
                             ? 'bg-slate-800 hover:bg-slate-700 text-cyan-300 border-cyan-500/30'
@@ -574,6 +586,7 @@ export default function App() {
                     onLogMaintenance={(asset) => requireAuth(() => setAuditAsset(asset))}
                     onOpenQr={(asset) => setQrAsset(asset)}
                     onOpenDetails={(uid) => setDetailsUid(uid)}
+                    onRegister={(uid) => openRegisterModal(uid)}
                     isDark={isDark}
                   />
                 ) : (
@@ -754,10 +767,7 @@ export default function App() {
         }}
         onRegisterAsset={(uid) => {
           setIsScanModalOpen(false);
-          requireAuth(() => {
-            setInitialUidForRegister(uid);
-            setRegisterOpen(true);
-          });
+          openRegisterModal(uid);
         }}
         onDeleteAsset={handleDeleteAsset}
         isDark={isDark}

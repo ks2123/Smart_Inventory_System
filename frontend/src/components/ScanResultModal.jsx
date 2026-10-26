@@ -268,9 +268,7 @@ export default function ScanResultModal({
             </div>
           </div>
 
-          {/* ------------------------------------------------------------- */}
-          {/* CASE 1: REGISTERED IN SAME LAB (Apni Lab ka Asset Hai)         */}
-          {/* ------------------------------------------------------------- */}
+          {/* CASE 1: REGISTERED IN SAME LAB */}
           {isSameLab && (
             <div className="mt-4 space-y-4">
               {/* Lab Ownership Banner */}
@@ -381,7 +379,7 @@ export default function ScanResultModal({
           )}
 
           {/* ------------------------------------------------------------- */}
-          {/* CASE 2: REGISTERED IN ANOTHER LAB (Kisi Aur Lab me Registered) */}
+          {/* CASE 2: REGISTERED IN ANOTHER LAB */}
           {/* ------------------------------------------------------------- */}
           {isOtherLab && (
             <div className="mt-4 p-5 rounded-2xl bg-rose-950/30 border border-rose-500/50 space-y-3.5">
@@ -394,7 +392,7 @@ export default function ScanResultModal({
                     ALREADY REGISTERED IN ANOTHER LAB!
                   </h3>
                   <p className="text-xs font-mono text-slate-300 mt-1">
-                    Ye RFID tag already kisi aur lab workspace me bind hai:
+                    This RFID tag is already bound to another laboratory workspace:
                   </p>
                 </div>
               </div>
@@ -419,7 +417,7 @@ export default function ScanResultModal({
               <div className="flex items-start gap-2 p-3 rounded-xl bg-amber-950/30 border border-amber-500/30 text-amber-300 text-xs font-mono">
                 <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5 text-amber-400" />
                 <span>
-                  <strong>Security Rule:</strong> Jab tak us lab ka Admin is asset ko apni lab se <strong>Delete</strong> nahi karega, tab tak aap ise apni lab me register nahi kar sakte.
+                  <strong>Security Policy:</strong> This asset cannot be registered in your lab until the administrator of that facility removes or deletes it from their workspace.
                 </span>
               </div>
 
@@ -437,7 +435,7 @@ export default function ScanResultModal({
           )}
 
           {/* ------------------------------------------------------------- */}
-          {/* CASE 3: UNREGISTERED TAG (Kisi bhi Lab me nahi hai - Free Tag) */}
+          {/* CASE 3: UNREGISTERED TAG (Free Tag) */}
           {/* ------------------------------------------------------------- */}
           {!isRegistered && (
             <div className="mt-4 p-5 rounded-2xl bg-cyan-950/30 border border-cyan-500/40 space-y-3.5">
@@ -450,7 +448,7 @@ export default function ScanResultModal({
                     UNREGISTERED / FREE RFID TAG DETECTED
                   </h3>
                   <p className="text-xs font-mono text-slate-300 mt-1">
-                    Ye RFID tag (UID: <strong>{scannedData.uid}</strong>) abhi kisi bhi lab me registered nahi hai. Aap ise apni lab me turant bind kar sakte hain!
+                    This RFID tag (UID: <strong>{scannedData.uid}</strong>) is not yet registered in any lab. You can bind and register it to your workspace immediately!
                   </p>
                 </div>
               </div>

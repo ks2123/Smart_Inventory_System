@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T18:51:59.097Z",
+  "updated_at": "2026-10-26T04:19:56.826Z",
   "workspaces": [
     {
       "id": "lab-robotics-01",
@@ -234,33 +234,93 @@
       "updated_at": "2026-09-20T14:00:00Z"
     },
     {
-      "id": "50279874-99e7-488c-ad54-0b64e8912629",
+      "id": "5ef69992-acc5-4d0e-8e97-a1ad0662430b",
       "workspace_id": "lab-mvlaw0w8",
-      "uid": "51DFF206",
-      "item_name": "mobile phoe",
+      "uid": "D9F0F013",
+      "item_name": "microscope",
       "category": "Test & Measurement",
-      "department": "IOT",
-      "purchase_date": "2026-10-23",
+      "department": "chem lab",
+      "purchase_date": "2026-10-25",
       "cost": null,
       "status": "active",
-      "image_url": "/uploads/51DFF206-1792781303527.jpeg",
-      "image_path": "51DFF206-1792781303527.jpeg",
-      "created_at": "2026-10-23T18:48:23.531Z",
-      "updated_at": "2026-10-23T18:48:55.870Z"
+      "image_url": null,
+      "image_path": null,
+      "created_at": "2026-10-25T16:34:36.671Z",
+      "updated_at": "2026-10-25T16:34:36.671Z"
+    },
+    {
+      "id": "720cf1c3-8f09-4598-97ab-d1dee20a089e",
+      "workspace_id": "lab-mvlaw0w8",
+      "uid": "AB2174D7",
+      "item_name": "chemical cupboard",
+      "category": "Test & Measurement",
+      "department": "chem lab",
+      "purchase_date": "2026-10-25",
+      "cost": null,
+      "status": "active",
+      "image_url": null,
+      "image_path": null,
+      "created_at": "2026-10-25T17:11:02.648Z",
+      "updated_at": "2026-10-25T17:11:02.648Z"
+    },
+    {
+      "id": "ad75ce4a-88eb-48d8-9de7-9ea66defedc7",
+      "workspace_id": "lab-mvlaw0w8",
+      "uid": "2F91BA31",
+      "item_name": "rest of the things",
+      "category": "Test & Measurement",
+      "department": "chem lab",
+      "purchase_date": "2026-10-25",
+      "cost": null,
+      "status": "active",
+      "image_url": null,
+      "image_path": null,
+      "created_at": "2026-10-25T17:11:29.008Z",
+      "updated_at": "2026-10-25T17:11:29.008Z"
+    },
+    {
+      "id": "07a8dce9-0b04-467c-adfa-307c9b3000e9",
+      "workspace_id": "lab-mvlaw0w8",
+      "uid": "630F0307",
+      "item_name": "cupborad",
+      "category": "Test & Measurement",
+      "department": "IOT",
+      "purchase_date": "2026-10-25",
+      "cost": null,
+      "status": "active",
+      "image_url": null,
+      "image_path": null,
+      "created_at": "2026-10-25T19:29:28.090Z",
+      "updated_at": "2026-10-25T19:29:28.090Z"
+    },
+    {
+      "id": "5ef8dbbb-147f-41f4-96de-27da0f3a8e51",
+      "workspace_id": "lab-mvlaw0w8",
+      "uid": "51DFF206",
+      "item_name": "mobile",
+      "category": "Test & Measurement",
+      "department": "IOT",
+      "purchase_date": "2026-10-25",
+      "cost": null,
+      "status": "active",
+      "image_url": null,
+      "image_path": null,
+      "created_at": "2026-10-25T19:30:28.229Z",
+      "updated_at": "2026-10-26T04:16:12.666Z"
     }
   ],
   "logs": [
     {
-      "id": "5e3a8024-9123-457c-a3b0-a3f4f5bb6ba4",
+      "id": "a08fcd52-fbe2-4363-adad-d249543baad2",
       "workspace_id": "lab-mvlaw0w8",
       "asset_uid": "51DFF206",
       "staff_id": "staff-mvlaxuo2",
-      "assistant_name": "Dr. Evelyn Vance",
-      "description": "changed the guard",
-      "log_date": "2026-10-23",
+      "assistant_name": "ravikumar",
+      "description": "screen guard change",
+      "log_date": "2026-10-26",
       "log_type": "inspection",
       "parts_replaced": [],
-      "created_at": "2026-10-23T18:48:55.870Z"
+      "created_at": "2026-10-26T04:16:12.666Z"
     },
     {
       "id": "log-001",
@@ -332,60 +392,354 @@
   ],
   "scans": [
     {
-      "id": 8,
-      "uid": "081F694D",
-      "device_id": "esp32-bench-reader-1",
-      "found": false,
-      "scanned_at": "2026-10-23T18:51:59.096Z"
-    },
-    {
-      "id": 7,
+      "id": 57,
       "uid": "5B871506",
       "device_id": "esp32-bench-reader-1",
       "found": false,
-      "scanned_at": "2026-10-23T18:51:51.020Z"
+      "scanned_at": "2026-10-26T04:19:56.826Z"
     },
     {
-      "id": 6,
+      "id": 56,
+      "uid": "5B871506",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-26T04:19:45.790Z"
+    },
+    {
+      "id": 55,
       "uid": "51DFF206",
       "device_id": "esp32-bench-reader-1",
       "found": true,
-      "scanned_at": "2026-10-23T18:51:45.943Z"
+      "scanned_at": "2026-10-26T04:19:31.873Z"
     },
     {
-      "id": 5,
+      "id": 54,
       "uid": "51DFF206",
       "device_id": "esp32-bench-reader-1",
       "found": true,
-      "scanned_at": "2026-10-23T18:49:09.417Z"
+      "scanned_at": "2026-10-26T04:16:30.277Z"
     },
     {
-      "id": 4,
+      "id": 53,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-26T04:16:20.903Z"
+    },
+    {
+      "id": 52,
       "uid": "51DFF206",
       "device_id": "robotics-esp32-reader-1",
       "found": true,
-      "scanned_at": "2026-10-23T18:48:55.932Z"
+      "scanned_at": "2026-10-26T04:16:12.713Z"
     },
     {
-      "id": 3,
+      "id": 51,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-26T04:15:18.806Z"
+    },
+    {
+      "id": 70,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:32:45.458Z"
+    },
+    {
+      "id": 69,
+      "uid": "0820DB45",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:31:25.913Z"
+    },
+    {
+      "id": 68,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:31:19.972Z"
+    },
+    {
+      "id": 67,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:30:54.578Z"
+    },
+    {
+      "id": 66,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:30:50.116Z"
+    },
+    {
+      "id": 65,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:30:45.021Z"
+    },
+    {
+      "id": 64,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:30:36.692Z"
+    },
+    {
+      "id": 63,
       "uid": "51DFF206",
       "device_id": "robotics-esp32-reader-1",
       "found": true,
-      "scanned_at": "2026-10-23T18:48:23.600Z"
+      "scanned_at": "2026-10-25T19:30:28.257Z"
     },
     {
-      "id": 2,
+      "id": 62,
       "uid": "51DFF206",
       "device_id": "esp32-bench-reader-1",
       "found": false,
-      "scanned_at": "2026-10-23T18:47:39.821Z"
+      "scanned_at": "2026-10-25T19:30:09.898Z"
     },
     {
-      "id": 1,
+      "id": 61,
+      "uid": "630F0307",
+      "device_id": "robotics-esp32-reader-1",
+      "found": true,
+      "scanned_at": "2026-10-25T19:29:28.112Z"
+    },
+    {
+      "id": 60,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:29:02.445Z"
+    },
+    {
+      "id": 59,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:28:52.107Z"
+    },
+    {
+      "id": 58,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:28:26.197Z"
+    },
+    {
+      "id": 57,
       "uid": "51DFF206",
       "device_id": "esp32-bench-reader-1",
       "found": false,
-      "scanned_at": "2026-10-23T18:47:11.131Z"
+      "scanned_at": "2026-10-25T19:28:18.729Z"
+    },
+    {
+      "id": 56,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:28:10.330Z"
+    },
+    {
+      "id": 55,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:27:02.531Z"
+    },
+    {
+      "id": 54,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:26:03.761Z"
+    },
+    {
+      "id": 53,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:25:54.477Z"
+    },
+    {
+      "id": 52,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:24:59.446Z"
+    },
+    {
+      "id": 51,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:24:48.912Z"
+    },
+    {
+      "id": 50,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:24:26.586Z"
+    },
+    {
+      "id": 49,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:24:17.061Z"
+    },
+    {
+      "id": 48,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:20:17.951Z"
+    },
+    {
+      "id": 47,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:19:55.532Z"
+    },
+    {
+      "id": 46,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:18:29.087Z"
+    },
+    {
+      "id": 45,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:17:09.550Z"
+    },
+    {
+      "id": 44,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:17:05.411Z"
+    },
+    {
+      "id": 43,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T19:16:59.816Z"
+    },
+    {
+      "id": 42,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:59:09.337Z"
+    },
+    {
+      "id": 41,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:57:25.611Z"
+    },
+    {
+      "id": 40,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:56:13.948Z"
+    },
+    {
+      "id": 39,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:42:59.113Z"
+    },
+    {
+      "id": 38,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:42:47.740Z"
+    },
+    {
+      "id": 37,
+      "uid": "089D94EF",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:41:45.444Z"
+    },
+    {
+      "id": 36,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:41:32.582Z"
+    },
+    {
+      "id": 35,
+      "uid": "5A276406",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:41:29.618Z"
+    },
+    {
+      "id": 34,
+      "uid": "5B871506",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:41:17.015Z"
+    },
+    {
+      "id": 33,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:41:08.434Z"
+    },
+    {
+      "id": 32,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:40:58.273Z"
+    },
+    {
+      "id": 31,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:40:41.253Z"
+    },
+    {
+      "id": 30,
+      "uid": "5B871506",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:39:15.113Z"
+    },
+    {
+      "id": 29,
+      "uid": "51DFF206",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:30:22.275Z"
+    },
+    {
+      "id": 28,
+      "uid": "630F0307",
+      "device_id": "esp32-bench-reader-1",
+      "found": false,
+      "scanned_at": "2026-10-25T18:28:20.009Z"
     }
   ]
 }

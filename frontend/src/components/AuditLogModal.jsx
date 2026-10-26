@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Wrench, ShieldCheck, Tag, Plus, CheckCircle2, AlertCircle } from 'lucide-react';
 import { addMaintenanceLog } from '../api/client';
 import confetti from 'canvas-confetti';
@@ -14,6 +14,17 @@ export default function AuditLogModal({ isOpen, onClose, asset, onLogged, isDark
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+
+  // Clear stale fields when opening a new audit log
+  useEffect(() => {
+    if (isOpen) {
+      setDescription('');
+      setPartsInput('');
+      setPartsList([]);
+      setError('');
+      if (asset?.status) setStatusAfter(asset.status);
+    }
+  }, [isOpen, asset?.uid]);
 
   if (!isOpen || !asset) return null;
 
@@ -110,7 +121,7 @@ export default function AuditLogModal({ isOpen, onClose, asset, onLogged, isDark
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="mt-5 space-y-4">
+        <form onSubmit={handleSubmit} autoComplete="off" className="mt-5 space-y-4">
           
           {/* Assistant Name & Date */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -122,6 +133,7 @@ export default function AuditLogModal({ isOpen, onClose, asset, onLogged, isDark
                 type="text"
                 value={assistantName}
                 onChange={(e) => setAssistantName(e.target.value)}
+                autoComplete="off"
                 required
                 className={`w-full px-3 py-2 rounded-xl border text-xs font-mono focus:outline-none transition-all ${
                   isDark
@@ -225,6 +237,7 @@ export default function AuditLogModal({ isOpen, onClose, asset, onLogged, isDark
                 onChange={(e) => setPartsInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); handleAddPart(); } }}
                 placeholder="e.g. Probe Cable, Fuse 5A"
+                autoComplete="off"
                 className={`flex-1 px-3 py-1.5 rounded-xl border text-xs font-mono focus:outline-none transition-all ${
                   isDark
                     ? 'bg-slate-900 border-slate-700 text-white focus:border-cyan-400'

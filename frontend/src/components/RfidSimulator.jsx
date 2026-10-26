@@ -188,6 +188,7 @@ export default function RfidSimulator({ onScan, scanning, isDark, assets = [] })
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search RFID tag name, UID, category, or location..."
+              autoComplete="off"
               className={`w-full pl-10 pr-4 py-2 rounded-xl text-xs font-mono border focus:outline-none transition-all ${
                 isDark
                   ? 'bg-slate-950/70 border-slate-800 text-white placeholder-slate-500 focus:border-cyan-400'
